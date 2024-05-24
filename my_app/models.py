@@ -44,18 +44,7 @@ class Employee(models.Model):
     email = models.EmailField()
     phone = models.CharField(max_length=20)
     hire_date = models.DateField()
-
-class Shift(models.Model):
-    employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
-    date = models.DateField()
-    start_time = models.TimeField()
-    end_time = models.TimeField()
-
-class Inventory(models.Model):
-    name = models.CharField(max_length=100)
-    quantity_available = models.IntegerField()
-    unit_price = models.DecimalField(max_digits=10, decimal_places=2)
-
+    
 class Categories(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True, null=True)
