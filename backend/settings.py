@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Ahead_system',
+        'USER': 'Ahead_teams',
+        'PASSWORD': 'ahead_pwd',
+        'HOST': 'localhost',  # Set to your PostgreSQL host if it's not localhost
+        'PORT': '5432',       # Default PostgreSQL port
     }
 }
 
